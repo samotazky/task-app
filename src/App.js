@@ -1,14 +1,6 @@
 
 const App = () => {
   // čisty Javascript - začiatok
-  // const vychodziPole = [5, 6, 7, 8, 9]
-
-  // const vyslednePole = vychodziPole.map( (jednoCislo) => {
-  //   return jednoCislo + 10
-  // })
-  
-  // console.log(vyslednePole)
-
   const data = [
     { id: 1, name: 'Vynést koš' },
     { id: 2, name: 'Uklidit kuchyň' },
@@ -17,12 +9,14 @@ const App = () => {
     { id: 5, name: 'Nakrmit kočku' },
     ]
 
-    const vysledok = data.map( (oneDataObject) => {
-      return oneDataObject.name
+    const vymazaneId = 3
+
+    const vyslednePole = data.filter( (jedenUkol) => {
+      return jedenUkol.id != vymazaneId
     })
 
-    console.log(vysledok);
-  
+    console.log(vyslednePole);
+
   // čisty Javascript - koniec
   return(
     <h1>Test</h1>
